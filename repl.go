@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/ruhollahh/pokx-cli/clients/pokeapi"
+	"github.com/ruhollahh/pokx-cli/internal/clients/pokeapi"
 	"os"
 	"strings"
 )
