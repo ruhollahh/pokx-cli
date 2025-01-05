@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func helpCommand() error {
+func helpCommand(_ *config) error {
 	help := strings.Builder{}
 	_, err := help.WriteString("Welcome to the Pokx CLI!\nUsage:\n\n")
 	if err != nil {
