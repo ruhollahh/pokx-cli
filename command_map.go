@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func mapCommand(cfg *config) error {
+func mapCommand(cfg *config, args ...string) error {
 	areas, err := cfg.pokeapiClient.ListAreas(cfg.next)
 	if err != nil {
 		return fmt.Errorf("listAreas: %w", err)
@@ -20,7 +20,7 @@ func mapCommand(cfg *config) error {
 	return nil
 }
 
-func mapBackCommand(cfg *config) error {
+func mapBackCommand(cfg *config, args ...string) error {
 	if cfg.previous == nil {
 		fmt.Println("you're on the first page")
 		return nil
