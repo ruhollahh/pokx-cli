@@ -17,7 +17,7 @@ type RespAreas struct {
 	} `json:"results"`
 }
 
-func (c *Client) ListAreas(pageURL *string) (RespAreas, error) {
+func (c *Client) GetAreas(pageURL *string) (RespAreas, error) {
 	url := baseURL + "/location-area"
 	if pageURL != nil {
 		url = *pageURL

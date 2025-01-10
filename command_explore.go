@@ -9,7 +9,7 @@ func exploreCommand(cfg *config, args ...string) error {
 
 	area := args[0]
 	fmt.Printf("Exploring %s...\n", area)
-	pokemons, err := cfg.pokeapiClient.ListPokemon(area)
+	pokemons, err := cfg.pokeapiClient.GetPokemons(area)
 	if err != nil {
 		return fmt.Errorf("listPokemon: %w", err)
 	}

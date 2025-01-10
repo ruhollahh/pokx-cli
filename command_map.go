@@ -5,7 +5,7 @@ import (
 )
 
 func mapCommand(cfg *config, args ...string) error {
-	areas, err := cfg.pokeapiClient.ListAreas(cfg.next)
+	areas, err := cfg.pokeapiClient.GetAreas(cfg.next)
 	if err != nil {
 		return fmt.Errorf("listAreas: %w", err)
 	}
@@ -26,7 +26,7 @@ func mapBackCommand(cfg *config, args ...string) error {
 		return nil
 	}
 
-	areas, err := cfg.pokeapiClient.ListAreas(cfg.previous)
+	areas, err := cfg.pokeapiClient.GetAreas(cfg.previous)
 	if err != nil {
 		return fmt.Errorf("listAreas: %w", err)
 	}
