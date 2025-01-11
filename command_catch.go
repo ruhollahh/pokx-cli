@@ -31,7 +31,7 @@ func catchCommand(cfg *config, args ...string) error {
 	}
 
 	fmt.Printf("%s was caught!\n", name)
-	cfg.caughtPokemons[name] = true
+	cfg.caughtPokemons[name] = pokemon
 
 	return nil
 }
